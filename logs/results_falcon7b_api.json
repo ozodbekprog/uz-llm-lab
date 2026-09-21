@@ -1,0 +1,302 @@
+{
+  "summary": {
+    "model": "Falcon3-7B-Instruct-1.58bit (server)",
+    "url": "http://127.0.0.1:8080",
+    "accuracy": 0.0667,
+    "n": 30,
+    "per_category": {
+      "bilim": {
+        "acc": 0.0,
+        "n": 7
+      },
+      "math": {
+        "acc": 0.1429,
+        "n": 7
+      },
+      "tarix": {
+        "acc": 0.0,
+        "n": 4
+      },
+      "tarjima": {
+        "acc": 0.0,
+        "n": 4
+      },
+      "til": {
+        "acc": 0.125,
+        "n": 8
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "til-01",
+      "category": "til",
+      "question": "«Kitob» so'zining ko'plik shakli qaysi? A) kitobni B) kitoblar C) kitobda D) kitobim",
+      "answer": "B",
+      "pred": null,
+      "gen": "«Kitob» so'zining",
+      "ok": false
+    },
+    {
+      "id": "til-02",
+      "category": "til",
+      "question": "Qaysi gap grammatik jihatdan to'g'ri? A) Men maktabga bordim B) Men maktabga borish C) Men maktabga borgan D) Men maktabga boraman edi",
+      "answer": "A",
+      "pred": "A",
+      "gen": "A) Men maktabga bordim",
+      "ok": true
+    },
+    {
+      "id": "til-03",
+      "category": "til",
+      "question": "«Chiroyli» so'zining antonimi (zidi) qaysi? A) go'zal B) yaxshi C) xunuk D) katta",
+      "answer": "C",
+      "pred": "A",
+      "gen": "A) go'zal",
+      "ok": false
+    },
+    {
+      "id": "til-04",
+      "category": "til",
+      "question": "«Tez» so'zining sinonimi qaysi? A) sekin B) jadal C) past D) kichik",
+      "answer": "B",
+      "pred": null,
+      "gen": "«Tez» so'zining",
+      "ok": false
+    },
+    {
+      "id": "til-05",
+      "category": "til",
+      "question": "Qaysi so'z ot (ism) turkumiga kiradi? A) yugurmoq B) chiroyli C) daraxt D) tez",
+      "answer": "C",
+      "pred": "A",
+      "gen": "A) yugurmoq",
+      "ok": false
+    },
+    {
+      "id": "til-06",
+      "category": "til",
+      "question": "«Men har kuni maktabga boraman» gapida fe'l qaysi so'z? A) men B) har C) maktabga D) boraman",
+      "answer": "D",
+      "pred": "A",
+      "gen": "A) men",
+      "ok": false
+    },
+    {
+      "id": "til-07",
+      "category": "til",
+      "question": "«O'qituvchi» so'zining ma'nosi nima? A) shifokor B) muallim C) muhandis D) haydovchi",
+      "answer": "B",
+      "pred": "A",
+      "gen": "A) shifokor",
+      "ok": false
+    },
+    {
+      "id": "til-08",
+      "category": "til",
+      "question": "Qaysi qo'shimcha kelishik (jo'nalish) ma'nosini bildiradi? A) -lar B) -ning C) -ga D) -dan",
+      "answer": "C",
+      "pred": "A",
+      "gen": "A) -lar",
+      "ok": false
+    },
+    {
+      "id": "bilim-01",
+      "category": "bilim",
+      "question": "O'zbekistonning poytaxti qaysi shahar? A) Samarqand B) Buxoro C) Toshkent D) Namangan",
+      "answer": "C",
+      "pred": "A",
+      "gen": "A) Samarqand",
+      "ok": false
+    },
+    {
+      "id": "bilim-02",
+      "category": "bilim",
+      "question": "Dunyodagi eng katta okean qaysi? A) Atlantika B) Hind C) Tinch D) Shimoliy Muz",
+      "answer": "C",
+      "pred": null,
+      "gen": "Atlantika",
+      "ok": false
+    },
+    {
+      "id": "bilim-03",
+      "category": "bilim",
+      "question": "Suvning kimyoviy formulasi qanday? A) CO2 B) H2O C) O2 D) NaCl",
+      "answer": "B",
+      "pred": "A",
+      "gen": "A) CO2",
+      "ok": false
+    },
+    {
+      "id": "bilim-04",
+      "category": "bilim",
+      "question": "Quyosh sistemasidagi eng katta sayyora qaysi? A) Yer B) Mars C) Yupiter D) Saturn",
+      "answer": "C",
+      "pred": "A",
+      "gen": "A) Yer",
+      "ok": false
+    },
+    {
+      "id": "bilim-05",
+      "category": "bilim",
+      "question": "Inson tanasidagi eng katta a'zo (organ) qaysi? A) yurak B) jigar C) teri D) o'pka",
+      "answer": "C",
+      "pred": "A",
+      "gen": "A) yurak",
+      "ok": false
+    },
+    {
+      "id": "bilim-06",
+      "category": "bilim",
+      "question": "Bir yilda nechta kun bor (kabisa bo'lmagan yilda)? A) 360 B) 365 C) 366 D) 370",
+      "answer": "B",
+      "pred": "A",
+      "gen": "A) 360",
+      "ok": false
+    },
+    {
+      "id": "bilim-07",
+      "category": "bilim",
+      "question": "O'zbekiston mustaqillikka qaysi yilda erishgan? A) 1989 B) 1990 C) 1991 D) 1992",
+      "answer": "C",
+      "pred": "A",
+      "gen": "A) 1989",
+      "ok": false
+    },
+    {
+      "id": "math-01",
+      "category": "math",
+      "question": "12 × 8 = ? A) 86 B) 92 C) 96 D) 108",
+      "answer": "C",
+      "pred": "A",
+      "gen": "A) 86",
+      "ok": false
+    },
+    {
+      "id": "math-02",
+      "category": "math",
+      "question": "144 ni 12 ga bo'lsak nechchi bo'ladi? A) 10 B) 11 C) 12 D) 14",
+      "answer": "C",
+      "pred": null,
+      "gen": "144 ni 12 ga",
+      "ok": false
+    },
+    {
+      "id": "math-03",
+      "category": "math",
+      "question": "Agar 3 ta qalam 15 000 so'm bo'lsa, 7 ta qalam qancha bo'ladi? A) 30 000 B) 35 000 C) 40 000 D) 45 000",
+      "answer": "B",
+      "pred": "A",
+      "gen": "A) 30 00",
+      "ok": false
+    },
+    {
+      "id": "math-04",
+      "category": "math",
+      "question": "2 + 3 × 4 = ? A) 14 B) 20 C) 24 D) 9",
+      "answer": "A",
+      "pred": "A",
+      "gen": "Javob: A) 14",
+      "ok": true
+    },
+    {
+      "id": "math-05",
+      "category": "math",
+      "question": "10 ning kvadrati nechchi? A) 20 B) 100 C) 1000 D) 110",
+      "answer": "B",
+      "pred": "A",
+      "gen": "A) 20",
+      "ok": false
+    },
+    {
+      "id": "math-06",
+      "category": "math",
+      "question": "Ketma-ketlik: 2, 4, 8, 16, ... keyingi son qaysi? A) 18 B) 24 C) 32 D) 64",
+      "answer": "C",
+      "pred": "A",
+      "gen": "A) 18",
+      "ok": false
+    },
+    {
+      "id": "math-07",
+      "category": "math",
+      "question": "Agar poyezd 60 km/soat tezlikda 3 soat yursa, qancha masofa bosib o'tadi? A) 120 km B) 150 km C) 180 km D) 200 km",
+      "answer": "C",
+      "pred": "A",
+      "gen": "A) 120 km",
+      "ok": false
+    },
+    {
+      "id": "tarix-01",
+      "category": "tarix",
+      "question": "Amir Temur qaysi davlatga asos solgan? A) Buxoro xonligi B) Temuriylar imperiyasi C) Qo'qon xonligi D) Xiva xonligi",
+      "answer": "B",
+      "pred": "A",
+      "gen": "A) Buxoro xonlig",
+      "ok": false
+    },
+    {
+      "id": "tarix-02",
+      "category": "tarix",
+      "question": "Registon maydoni qaysi shaharda joylashgan? A) Toshkent B) Buxoro C) Samarqand D) Xiva",
+      "answer": "C",
+      "pred": "A",
+      "gen": "A) Toshkent",
+      "ok": false
+    },
+    {
+      "id": "tarix-03",
+      "category": "tarix",
+      "question": "Al-Xorazmiy qaysi fanlar rivojiga katta hissa qo'shgan? A) kimyo va biologiya B) matematika va astronomiya C) adabiyot va musiqa D) tibbiyot va botanika",
+      "answer": "B",
+      "pred": "A",
+      "gen": "A) kimyo va biologiya",
+      "ok": false
+    },
+    {
+      "id": "tarix-04",
+      "category": "tarix",
+      "question": "Ipak yo'li asosan qaysi ikki hududni bog'lagan? A) Yevropa va Afrika B) Xitoy va O'rta yer dengizi C) Hindiston va Avstraliya D) Amerika va Osiyo",
+      "answer": "B",
+      "pred": "A",
+      "gen": "A) Yevropa va Afrika",
+      "ok": false
+    },
+    {
+      "id": "tarjima-01",
+      "category": "tarjima",
+      "question": "«Good morning» iborasining o'zbekcha tarjimasi qaysi? A) Xayrli kech B) Xayrli tong C) Xayrli tun D) Rahmat",
+      "answer": "B",
+      "pred": null,
+      "gen": "«Good morning» iborasining o",
+      "ok": false
+    },
+    {
+      "id": "tarjima-02",
+      "category": "tarjima",
+      "question": "«Thank you» qanday tarjima qilinadi? A) Kechirasiz B) Iltimos C) Rahmat D) Salom",
+      "answer": "C",
+      "pred": null,
+      "gen": "«Thank you» qanday tar",
+      "ok": false
+    },
+    {
+      "id": "tarjima-03",
+      "category": "tarjima",
+      "question": "«Men kitob o'qiyman» gapining inglizcha tarjimasi qaysi? A) I read a book B) I write a book C) I see a book D) I buy a book",
+      "answer": "A",
+      "pred": null,
+      "gen": "«Men kitob o'qiy",
+      "ok": false
+    },
+    {
+      "id": "tarjima-04",
+      "category": "tarjima",
+      "question": "«How are you?» iborasining o'zbekcha tarjimasi qaysi? A) Ismingiz nima? B) Qalaysiz? C) Necha yoshdasiz? D) Qayerdansiz?",
+      "answer": "B",
+      "pred": "A",
+      "gen": "A) Ismingiz nima?",
+      "ok": false
+    }
+  ]
+}

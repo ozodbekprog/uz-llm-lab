@@ -8,29 +8,40 @@ Arzon temirda (GTX 1650 4GB + 16GB RAM laptop) ternary (1.58-bit) LLM lar bilan 
 |---|---|---|---|---|
 | BitNet b1.58 2B4T | 2.41B | 1.10 GB | CPU | **21.6 tok/s** |
 | Falcon3-7B-Instruct-1.58bit | 7.46B | 3.05 GB | CPU | **11.0 tok/s** |
+| Falcon3-10B-Instruct-1.58bit | 10.31B | 3.71 GB | CPU | **8.67 tok/s** |
 
 - 7B model odatda Q4 kvantlashda ~5 GB VRAM talab qiladi (4GB laptopda ishlamaydi).
-- Ternary formatda 3 GB, GPU'siz, CPU'da 11 tok/s.
+- Ternary formatda 3 GB, GPU'siz, CPU'da 11 tok/s; 10B model ham 3.7 GB bilan ishlaydi.
 
-## Post-hoc kvantlash tajribasi (Qwen2.5-0.5B)
+## Sifat (uzbench_mini, n=30)
 
-| Bosqich | Aniqlik (uzbench_mini, n=30) |
+| Model | Aniqlik |
 |---|---|
-| Baseline (FP16) | 23.3% |
-| absmean ternary | 0.0% |
-| ternary + LoRA (1 epoch) | 0.0% (loss 11.9 -> 6.1) |
+| Qwen2.5-0.5B-Instruct (FP16) | 23.3% |
+| Falcon3-7B-Instruct-1.58bit | 6.7% |
+| Qwen2.5-0.5B (absmean ternary) | 0.0% |
+| Qwen2.5-0.5B (ternary + LoRA) | 0.0% (loss 11.9 -> 6.1) |
 
-Xulosa: oddiy post-hoc ternary kvantlash kichik modelni buzadi, oddiy LoRA tiklay olmaydi.
-Ilg'or yondashuvlar kerak (HESTIA, Tequila, CAT-Q, BitDistill).
+Xulosa: katta model o'zbek tilida avtomatik kuchli emas; moslashtirish (fine-tune) kerak.
+Post-hoc absmean ternary kichik modelni buzadi, oddiy LoRA tiklay olmaydi -
+ilg'or yondashuvlar kerak (HESTIA, Tequila, CAT-Q, BitDistill).
+
+## Optimallashtirishlar
+
+- 16k kontekst + q8_0 KV-cache + flash-attn auto (llama-server)
+- systemd user xizmati: `systemctl --user status falcon-chat`
+- Energiya o'lchovi: `eval/energy_bench.py` (RAPL; `sudo chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj`)
 
 ## Tuzilma
 
 - `quantize/ternarize.py` - absmean ternary kvantlash
 - `train/train_lora.py` - LoRA / QLoRA fine-tune (fp32 / 4-bit)
-- `eval/run_bench.py` - uzbench_mini benchmark
+- `eval/run_bench.py` - uzbench_mini benchmark (transformers)
+- `eval/run_bench_api.py` - uzbench_mini benchmark (llama-server API)
+- `eval/energy_bench.py` - energiya o'lchovi (RAPL)
 - `data/uzbek-instruct.jsonl` - o'zbekcha instruct dataset (14k namuna)
 - `data/UzbekMMLU.parquet`, `eval/uzbench_mini.jsonl` - baholash to'plamlari
-- `start_falcon_chat.sh` - Falcon3-7B chat server (llama-server)
+- `start_falcon_chat.sh` - llama-server chat (MODEL/PORT/CTX env orqali sozlanadi)
 
 ## Reproduksiya
 
