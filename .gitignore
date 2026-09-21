@@ -1,0 +1,9 @@
+.venv/
+models/
+bitnet/
+__pycache__/
+*.pyc
+*.log
+*.gguf
+*.safetensors
+lora-*-checkpoints/
