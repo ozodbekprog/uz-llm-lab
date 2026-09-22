@@ -1,0 +1,203 @@
+{
+ "model": "models/gguf/qwen05b-ot-f16.gguf",
+ "tensors": {
+  "blk.0.attn_q.weight": {
+   "shape": [
+    896,
+    896
+   ],
+   "kron": {
+    "1": {
+     "split": "14x14",
+     "params": 4292,
+     "err": 0.97973,
+     "compression": 187.0
+    },
+    "2": {
+     "split": "14x14",
+     "params": 8584,
+     "err": 0.96268,
+     "compression": 93.5
+    },
+    "4": {
+     "split": "14x14",
+     "params": 17168,
+     "err": 0.93198,
+     "compression": 46.8
+    },
+    "8": {
+     "split": "14x14",
+     "params": 34336,
+     "err": 0.8832,
+     "compression": 23.4
+    },
+    "16": {
+     "split": "14x14",
+     "params": 68672,
+     "err": 0.8161,
+     "compression": 11.7
+    },
+    "32": {
+     "split": "14x14",
+     "params": 137344,
+     "err": 0.71157,
+     "compression": 5.8
+    },
+    "64": {
+     "split": "14x14",
+     "params": 274688,
+     "err": 0.55466,
+     "compression": 2.9
+    },
+    "128": {
+     "split": "14x14",
+     "params": 549376,
+     "err": 0.31372,
+     "compression": 1.5
+    }
+   },
+   "svd": {
+    "2": 0.77663,
+    "5": 0.69835,
+    "10": 0.63873,
+    "19": 0.57331,
+    "38": 0.49319,
+    "77": 0.40387,
+    "153": 0.30211,
+    "307": 0.17865
+   }
+  },
+  "blk.0.attn_output.weight": {
+   "shape": [
+    896,
+    896
+   ],
+   "kron": {
+    "1": {
+     "split": "14x14",
+     "params": 4292,
+     "err": 0.99139,
+     "compression": 187.0
+    },
+    "2": {
+     "split": "14x14",
+     "params": 8584,
+     "err": 0.98324,
+     "compression": 93.5
+    },
+    "4": {
+     "split": "14x14",
+     "params": 17168,
+     "err": 0.9678,
+     "compression": 46.8
+    },
+    "8": {
+     "split": "14x14",
+     "params": 34336,
+     "err": 0.93795,
+     "compression": 23.4
+    },
+    "16": {
+     "split": "14x14",
+     "params": 68672,
+     "err": 0.88388,
+     "compression": 11.7
+    },
+    "32": {
+     "split": "14x14",
+     "params": 137344,
+     "err": 0.79523,
+     "compression": 5.8
+    },
+    "64": {
+     "split": "14x14",
+     "params": 274688,
+     "err": 0.64232,
+     "compression": 2.9
+    },
+    "128": {
+     "split": "14x14",
+     "params": 549376,
+     "err": 0.38704,
+     "compression": 1.5
+    }
+   },
+   "svd": {
+    "2": 0.96302,
+    "5": 0.93693,
+    "10": 0.9001,
+    "19": 0.84345,
+    "38": 0.75232,
+    "77": 0.62223,
+    "153": 0.4819,
+    "307": 0.30467
+   }
+  },
+  "blk.0.ffn_gate.weight": {
+   "shape": [
+    4864,
+    896
+   ],
+   "kron": {
+    "1": {
+     "split": "32x14",
+     "params": 10176,
+     "err": 0.99806,
+     "compression": 428.3
+    },
+    "2": {
+     "split": "32x14",
+     "params": 20352,
+     "err": 0.99621,
+     "compression": 214.1
+    },
+    "4": {
+     "split": "32x14",
+     "params": 40704,
+     "err": 0.99281,
+     "compression": 107.1
+    },
+    "8": {
+     "split": "32x14",
+     "params": 81408,
+     "err": 0.9861,
+     "compression": 53.5
+    },
+    "16": {
+     "split": "32x14",
+     "params": 162816,
+     "err": 0.97301,
+     "compression": 26.8
+    },
+    "32": {
+     "split": "32x14",
+     "params": 325632,
+     "err": 0.94729,
+     "compression": 13.4
+    },
+    "64": {
+     "split": "32x14",
+     "params": 651264,
+     "err": 0.89668,
+     "compression": 6.7
+    },
+    "128": {
+     "split": "32x14",
+     "params": 1302528,
+     "err": 0.79536,
+     "compression": 3.3
+    }
+   },
+   "svd": {
+    "2": 0.98837,
+    "4": 0.97934,
+    "7": 0.96647,
+    "14": 0.94025,
+    "28": 0.9094,
+    "57": 0.87328,
+    "113": 0.81491,
+    "226": 0.70693
+   }
+  }
+ }
+}

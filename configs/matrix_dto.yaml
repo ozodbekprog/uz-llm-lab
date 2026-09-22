@@ -1,0 +1,29 @@
+# MATRIX-DTO global konfiguratsiya (BOSQICH 1-2).
+# CLI argumentlar bu qiymatlarni bosib ketadi.
+seed: 42
+
+quantize:
+  method: ot            # ot | round | absmean
+  granularity: row      # tensor | row | group
+  group_size: 128
+  eps: 0.05             # entropik regulyarizatsiya (alpha^2 ga nisbatan masshtabsiz)
+  max_iter: 200
+  tol: 1.0e-6
+  anderson_m: 5         # 0 => oddiy Sinkhorn
+  anderson_beta: 1.0
+  alpha_coarse: 33
+  alpha_refine: 16
+
+model:
+  name: models/Qwen2.5-0.5B-Instruct
+  include_lm_head: false
+  dtype: float32
+
+eval:
+  samples: 24
+  max_len: 192
+  data: data/uzbek-instruct.jsonl
+
+output:
+  model_dir: models/qwen05b-ot-ternary
+  results: logs/results_ot_quant.json

@@ -1,0 +1,83 @@
+2026-09-21 14:59:40.538 | INFO     | __main__:main:263 - cfg=TernaryOTConfig(method='ot', granularity='row', group_size=128, eps=0.05, max_iter=200, tol=1e-06, anderson_m=5, anderson_beta=1.0, alpha_coarse=33, alpha_refine=16, alpha_span=0.2, alpha_min_factor=0.25, alpha_max_factor=1.75, min_alpha=1e-08, eps_mass=1e-09, dtype=torch.float32, device='auto')
+2026-09-21 14:59:40.538 | INFO     | __main__:main:264 - model=models/Qwen2.5-0.5B-Instruct out=models/qwen05b-ot-ternary
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  76%|███████▌  | 220/290 [00:00<00:00, 2192.93it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 2231.21it/s]
+2026-09-21 14:59:41.372 | INFO     | __main__:main:270 - model loaded: 494.0M params
+2026-09-21 14:59:45.929 | INFO     | __main__:main:279 - fp32 loss=4.5703 (4.1s)
+2026-09-21 14:59:55.133 | INFO     | __main__:quantize_model:127 - [20/168] model.layers.2.mlp.up_proj rel_err=0.4461
+2026-09-21 15:00:09.007 | INFO     | __main__:quantize_model:127 - [40/168] model.layers.5.mlp.gate_proj rel_err=0.4432
+2026-09-21 15:00:26.174 | INFO     | __main__:quantize_model:127 - [60/168] model.layers.8.self_attn.o_proj rel_err=0.4845
+2026-09-21 15:00:35.424 | INFO     | __main__:quantize_model:127 - [80/168] model.layers.11.self_attn.v_proj rel_err=0.4591
+2026-09-21 15:00:46.595 | INFO     | __main__:quantize_model:127 - [100/168] model.layers.14.self_attn.k_proj rel_err=0.4625
+2026-09-21 15:00:56.728 | INFO     | __main__:quantize_model:127 - [120/168] model.layers.17.self_attn.q_proj rel_err=0.4590
+2026-09-21 15:01:14.077 | INFO     | __main__:quantize_model:127 - [140/168] model.layers.19.mlp.down_proj rel_err=0.4575
+2026-09-21 15:01:31.030 | INFO     | __main__:quantize_model:127 - [160/168] model.layers.22.mlp.up_proj rel_err=0.4462
+2026-09-21 15:01:34.245 | INFO     | __main__:quantize_model:127 - [168/168] model.layers.23.mlp.down_proj rel_err=0.4569
+2026-09-21 15:01:34.254 | INFO     | __main__:main:288 - quantised 168 layers in 107.0s (mean rel_err=0.4640)
+2026-09-21 15:01:38.243 | INFO     | __main__:main:296 - ot loss=13.5298
+2026-09-21 15:01:42.376 | INFO     | __main__:quantize_model:127 - [20/168] model.layers.2.mlp.up_proj rel_err=0.5394
+2026-09-21 15:01:42.575 | INFO     | __main__:quantize_model:127 - [40/168] model.layers.5.mlp.gate_proj rel_err=0.5501
+2026-09-21 15:01:42.776 | INFO     | __main__:quantize_model:127 - [60/168] model.layers.8.self_attn.o_proj rel_err=0.6164
+2026-09-21 15:01:43.010 | INFO     | __main__:quantize_model:127 - [80/168] model.layers.11.self_attn.v_proj rel_err=0.5526
+2026-09-21 15:01:43.223 | INFO     | __main__:quantize_model:127 - [100/168] model.layers.14.self_attn.k_proj rel_err=0.5856
+2026-09-21 15:01:43.522 | INFO     | __main__:quantize_model:127 - [120/168] model.layers.17.self_attn.q_proj rel_err=0.6004
+2026-09-21 15:01:43.917 | INFO     | __main__:quantize_model:127 - [140/168] model.layers.19.mlp.down_proj rel_err=0.5527
+2026-09-21 15:01:44.242 | INFO     | __main__:quantize_model:127 - [160/168] model.layers.22.mlp.up_proj rel_err=0.5292
+2026-09-21 15:01:44.423 | INFO     | __main__:quantize_model:127 - [168/168] model.layers.23.mlp.down_proj rel_err=0.5448
+2026-09-21 15:01:44.435 | INFO     | __main__:main:308 - baseline absmean-tensor: mean rel_err=0.5780 (2.3s)
+2026-09-21 15:01:47.963 | INFO     | __main__:main:317 - absmean-tensor loss=14.2449
+2026-09-21 15:01:49.249 | INFO     | __main__:quantize_model:127 - [20/168] model.layers.2.mlp.up_proj rel_err=0.5250
+2026-09-21 15:01:49.517 | INFO     | __main__:quantize_model:127 - [40/168] model.layers.5.mlp.gate_proj rel_err=0.5211
+2026-09-21 15:01:49.750 | INFO     | __main__:quantize_model:127 - [60/168] model.layers.8.self_attn.o_proj rel_err=0.5763
+2026-09-21 15:01:49.996 | INFO     | __main__:quantize_model:127 - [80/168] model.layers.11.self_attn.v_proj rel_err=0.5511
+2026-09-21 15:01:50.302 | INFO     | __main__:quantize_model:127 - [100/168] model.layers.14.self_attn.k_proj rel_err=0.5411
+2026-09-21 15:01:50.604 | INFO     | __main__:quantize_model:127 - [120/168] model.layers.17.self_attn.q_proj rel_err=0.5460
+2026-09-21 15:01:50.805 | INFO     | __main__:quantize_model:127 - [140/168] model.layers.19.mlp.down_proj rel_err=0.5358
+2026-09-21 15:01:50.997 | INFO     | __main__:quantize_model:127 - [160/168] model.layers.22.mlp.up_proj rel_err=0.5246
+2026-09-21 15:01:51.081 | INFO     | __main__:quantize_model:127 - [168/168] model.layers.23.mlp.down_proj rel_err=0.5394
+2026-09-21 15:01:51.088 | INFO     | __main__:main:308 - baseline absmean-row: mean rel_err=0.5466 (2.1s)
+2026-09-21 15:01:54.620 | INFO     | __main__:main:317 - absmean-row loss=15.6405
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.48s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.48s/it]
+2026-09-21 15:02:10.980 | INFO     | __main__:main:326 - model saved: models/qwen05b-ot-ternary
+
+==============================================================================
+MATRIX-DTO | layer 1 natijalari | model: models/Qwen2.5-0.5B-Instruct | tag: full
+granularity=row eps=0.05 anderson_m=5 method=ot | 168 qatlam, 494.0M param
+==============================================================================
+
+[1] Kvantlash sifati (rel_err = ||W-Q||_F/||W||_F, o'rtacha)
+metod           qatlam  rel_err  MSE        vaqt,s
+--------------------------------------------------
+ot              168     0.4640   1.059e-04  105.8 
+absmean-tensor  168     0.5780   1.784e-04  0.6   
+absmean-row     168     0.5466   1.467e-04  0.6   
+
+Sinkhorn iteratsiyalari (OT qatlamlari): min=12 mean=19.5 max=201
+
+[2] Loss (o'zbekcha instruct, n=24)
+model  NLL    
+--------------
+fp32   4.5703 
+ot     13.5298
+
+[3] Anderson mikrobenchmark (q_proj, birinchi 128 qator)
+ssenariy                      variant   iter  vaqt,s  marginal_err  converged
+-----------------------------------------------------------------------------
+quant eps=0.05 tol=1e-6 f32   plain     80    0.220   9.98e-07      True     
+quant eps=0.05 tol=1e-6 f32   anderson  13    0.087   3.58e-07      True     
+hard  eps=0.01 tol=1e-10 f64  plain     4000  14.103  1.17e-10      False    
+hard  eps=0.01 tol=1e-10 f64  anderson  26    0.208   8.43e-11      True     
+Anderson iteratsiya tejamkorligi -> hard  eps=0.01 tol=1e-10 f64: 153.8x; quant eps=0.05 tol=1e-6 f32: 6.2x
+
+[4] Modul turlari bo'yicha rel_err
+modul      ot      absmean-tensor  absmean-row
+----------------------------------------------
+down_proj  0.4583  0.5525          0.5366     
+gate_proj  0.4527  0.5557          0.5315     
+k_proj     0.4671  0.6050          0.5498     
+o_proj     0.4773  0.5982          0.5623     
+q_proj     0.4597  0.6199          0.5449     
+up_proj    0.4516  0.5391          0.5313     
+v_proj     0.4813  0.5759          0.5700     
+
+JSON: /home/tony/Documents/Default Project/uz-llm-lab/logs/results_ot_quant.json

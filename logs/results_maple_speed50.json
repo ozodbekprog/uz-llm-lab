@@ -1,0 +1,35 @@
+{
+  "date": "2026-09-22",
+  "project": "SPEED-50",
+  "model": "deepgrove/maple-preview (20B-A1B ternary MoE)",
+  "gguf": "maple-preview-TQ2_0-head-Q4_K.gguf (5.49 GiB)",
+  "hardware": "GTX 1650 4GB (Vulkan1) + i5-12450H 8c + 16GB DDR4",
+  "bench": "llama-bench pp64/tg32, -dev Vulkan1, -ctk q8_0 -ctv q8_0, t8",
+  "sweep": {
+    "cpu_only_ngl0": {"pp64": 61.85, "tg32": 36.97},
+    "ncmoe24": {"pp64": 67.42, "tg32": 48.73},
+    "ncmoe20": {"pp64": 72.25, "tg32": 52.06},
+    "ncmoe16": {"pp64": 83.15, "tg32": 57.89},
+    "ncmoe12": {"pp64": 95.97, "tg32": 64.99},
+    "ncmoe8": {"pp64": null, "tg32": 67.06},
+    "ncmoe7": "OOM",
+    "ncmoe6": "OOM",
+    "ncmoe4": "OOM"
+  },
+  "server": {
+    "speed_config": {"ngl": 99, "ncmoe": 8, "ctx": 4096, "tok_s": 65.3, "vram_mb": 3653},
+    "context_config": {"ngl": 99, "ncmoe": 12, "ctx": 65536, "tok_s": 56.9, "vram_mb": 3306}
+  },
+  "failed_optimizations": {
+    "spec_decode_qwen05b_draft": {"tok_s": 56.9, "verdict": "slower"},
+    "threads_t6": {"tg32": 63.93},
+    "threads_t10": {"tg32": 65.59},
+    "threads_t12": {"tg32": 59.63},
+    "fa1": {"tg32": 66.39},
+    "two_gpu_split": "OOM"
+  },
+  "falcon3_10b": {
+    "before": {"backend": "CPU I2_S", "tok_s": 8.67, "uzbench": 0.10},
+    "after": {"backend": "Vulkan TQ2_0 ngl40", "tok_s": 14.80, "uzbench": 0.167}
+  }
+}

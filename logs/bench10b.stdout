@@ -1,0 +1,58 @@
+til-01       kutilgan=B model=None X | 'Sen foydali yordamch'
+til-02       kutilgan=A model=A OK | 'A) Men maktabga bordim'
+til-03       kutilgan=C model=None X | 'Yaxshi'
+til-04       kutilgan=B model=None X | "Tez so'zining konon"
+til-05       kutilgan=C model=D X | 'D) tez'
+til-06       kutilgan=D model=D OK | 'D) boraman'
+til-07       kutilgan=B model=None X | "O'qituvchi so'"
+til-08       kutilgan=C model=None X | '-ga'
+bilim-01     kutilgan=C model=None X | "O'zbekistonning poyta"
+bilim-02     kutilgan=C model=None X | 'Sen foydali yordamch'
+bilim-03     kutilgan=B model=C X | 'C) O2'
+bilim-04     kutilgan=C model=None X | 'Yer'
+bilim-05     kutilgan=C model=A X | 'A) yurak'
+bilim-06     kutilgan=B model=None X | 'Sen foydali yordamch'
+bilim-07     kutilgan=C model=None X | "O'zbekiston mustaqillik"
+math-01      kutilgan=C model=None X | 'Sen foydali yordamch'
+math-02      kutilgan=C model=None X | '144 ni 12 ga'
+math-03      kutilgan=B model=None X | 'Agar 3 ta qalam'
+math-04      kutilgan=A model=A OK | 'A) 14'
+math-05      kutilgan=B model=A X | 'A) 20'
+math-06      kutilgan=C model=None X | 'Sen foydali yordamch'
+math-07      kutilgan=C model=None X | 'Agar poyezd 6'
+tarix-01     kutilgan=B model=D X | 'D) Xiva xonligi'
+tarix-02     kutilgan=C model=B X | 'B) Buxoro'
+tarix-03     kutilgan=B model=A X | 'A) kattirik yord'
+tarix-04     kutilgan=B model=None X | 'Yevropa va Afrika'
+tarjima-01   kutilgan=B model=None X | 'Xayrli kech'
+tarjima-02   kutilgan=C model=None X | 'Iltimos'
+tarjima-03   kutilgan=A model=C X | 'C) I see a book'
+tarjima-04   kutilgan=B model=A X | 'A) Ismingiz nima?'
+{
+  "model": "Falcon3-7B-Instruct-1.58bit (server)",
+  "url": "http://127.0.0.1:8099",
+  "accuracy": 0.1,
+  "n": 30,
+  "per_category": {
+    "bilim": {
+      "acc": 0.0,
+      "n": 7
+    },
+    "math": {
+      "acc": 0.1429,
+      "n": 7
+    },
+    "tarix": {
+      "acc": 0.0,
+      "n": 4
+    },
+    "tarjima": {
+      "acc": 0.0,
+      "n": 4
+    },
+    "til": {
+      "acc": 0.25,
+      "n": 8
+    }
+  }
+}

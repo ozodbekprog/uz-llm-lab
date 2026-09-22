@@ -11,6 +11,7 @@ exec ./build/bin/llama-server \
   --host 127.0.0.1 \
   --port "$PORT" \
   -c "$CTX" \
+  --parallel 1 \
   -t 8 \
   -fa auto \
   -ctk q8_0 \

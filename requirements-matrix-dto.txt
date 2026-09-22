@@ -1,0 +1,17 @@
+# MATRIX-DTO core dependencies (BOSQICH 1-2).
+# Install:
+#   .venv/bin/python -m pip install -r requirements-matrix-dto.txt
+torch>=2.7
+transformers>=4.45
+accelerate>=1.0
+numpy>=1.26
+scipy>=1.13
+pot>=0.9.5
+loguru>=0.7
+pyyaml>=6.0
+pytest>=8.0
+
+# Later stages (uncomment when needed):
+# kfac-pytorch>=0.4     # BOSQICH 4: K-FAC Fisher
+# scikit-optimize>=0.10 # BOSQICH 5: Bayesian search
+# wandb>=0.17           # experiment tracking

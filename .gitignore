@@ -1,6 +1,7 @@
 .venv/
 models/
 bitnet/
+tools/
 __pycache__/
 *.pyc
 *.log
